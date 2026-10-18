@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for you.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f5f2eb;
+      color: #292722;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 18px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 390px;
+      background: #fffefa;
+      border: 1px solid #e5e0d6;
+      padding: 30px 24px;
+      border-radius: 5px;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #777168;
+      text-transform: uppercase;
+    }
+
+    .line {
+      height: 1px;
+      background: #e5e0d6;
+      margin: 18px 0 28px;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #b64c43;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(36px, 10vw, 48px);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin: 14px 0;
+      font-weight: 800;
+    }
+
+    .intro {
+      font-size: 14px;
+      color: #68645c;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      padding: 13px 17px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border: 1px solid #292722;
+      background: #292722;
+      color: white;
+      width: 100%;
+      transition: 0.2s;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .letter {
+      display: none;
+      margin-top: 26px;
+      animation: show 0.5s ease;
+    }
+
+    .letter h2 {
+      font-size: 19px;
+      letter-spacing: -0.5px;
+      margin-bottom: 22px;
+    }
+
+    .letter p {
+      font-size: 13px;
+      line-height: 1.95;
+      color: #514d46;
+      margin: 0 0 16px;
+    }
+
+    .letter .closing {
+      color: #292722;
+      margin-top: 24px;
+    }
+
+    .signature {
+      font-size: 12px;
+      color: #b64c43;
+      margin-top: 22px;
+    }
+
+    .extra {
+      display: none;
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e0d6;
+      animation: show 0.5s ease;
+    }
+
+    .extra p {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .extra button {
+      margin-top: 10px;
+      background: transparent;
+      color: #292722;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 10px;
+      color: #928b80;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .pop {
+      position: fixed;
+      top: -25px;
+      z-index: 10;
+      pointer-events: none;
+      animation: fall 3s linear forwards;
+      font-size: 20px;
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(180deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="card">
+
+      <div class="topline">
+        <span>a little something</span>
+        <span>19.10.26</span>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="label">a special day, apparently</div>
+
+      <h1>oh, you're<br>getting older.</h1>
+
+      <p class="intro">
+        well well well, selamat good morning (kayanya)
+        nyantai aja be, da bukan web slot aman aja.
+      </p>
+
+      <button id="openBtn">
+        BUKA MPRUY →
+      </button>
+
+      <div class="letter" id="letter">
+
+        <h2>halo dek,</h2>
+
+        <p>
+          happy birthday bebee, aduh sorry ya kakak
+          lagi bokek, dek, nanti deh dikasih goceng
+          oke lah ya. anw aku serius dulu ini mah, asli.
+        </p>
+
+        <p>
+          oke, thank u udah mau nerima aku di hidup kamu.
+          jujur ya, aku masih ga expect kalo beneran kamu
+          yang suka duluan, serius. ga lagi becanda inimah,
+          asli, ga boong, demi, beneran.
+        </p>
+
+        <p>
+          so, makasih ya. abis ini kamu jangan lagi ngerasa
+          sendiri, kamu punya aku, cerita sama aku, anyt.
+          jangan ada yang kamu tutupin dari aku, oke?
+          mungkin aku emang gabisa bantu banyak, tapi at least
+          bisa bikin kamu ga ngerasa sendiri.
+        </p>
+
+        <p>
+          oiya, aku belum ngedoain kamu deng, happy birthday,
+          semoga panjang umur n makin sayang aku. yaudahlah,
+          aku mau bilang kamu makin tua juga gabisa, tetep aja
+          bocah ingusan.
+        </p>
+
+        <p>
+          anw, jangan takut buat aku terlalu ngekang kamu,
+          aku bukan tipe orang kaya gitu, aku kasih kamu
+          hak kebebasan milih temen, pakaian, lakuin apa
+          yang kamu suka, aku selalu dukung, oke? tapi 
+          aku cuma mau kamu jangan sampe kamu jadiin itu
+          kesempatan buat kamu ngelirik orang lain kalo
+          kamu gamau aku congkel mata kamu, serius ini mah.
+          aku termasuk cemburuan, tapi aku bukan orang yang
+          suka ngekang, so, kamu manfaatin baik' kebebasan kamu,
+          harapan aku juga besar di kamu, aku cuma pengen
+          kamu bisa punya kesadaran sendiri dan bisa ngasih
+          orang jarak selayaknya temen. seandainya ada yang naksir
+          kamu, aku ga permasalahin, tapi aku cuma mau tau apa
+          respon kamu ke dia, tolong jangan kasih dia harapan
+          atau space buat dia masuk ke ranah pribadi kamu.
+        </p>
+
+        <p>
+          aku harap kamu masih dikelilingin banyak orang baik
+          lainnya selain aku, karna aku belum bisa liat kamu,
+          merhatiin kamu 24/7. aku juga manusia, aku juga pelajar
+          aku punya kesibukan yang aku harap kamu bisa maklumin.
+        </p>
+
+        <p>
+          kalo ada yang nyakitin kamu, aku injek pala mereka
+          atu' sok jagoan banget beraninya ma cewe, cuh.
+          jangan sungkan buat minta tolong sama aku, aku disini
+          juga sebagai pendamping kamu, aku pengen kita berkembang
+          bareng', bagi susah senengnya kamu sama aku, aku terima
+          kamu bukan buat jadiin kamu pelarian pas aku susah doang,
+          jadi jangan sampe mikir kalo kamu ngerepotin aku atau sebagainya.
+        </p>
+
+        <p>
+          jujur, aku lebih seneng kalo kamu banyak ngerepotin aku
+          karna aku jadi ngerasa dianggep sebagai pasangan bukan
+          orang lain yang ga seharusnya tau atau liat sedihnya kamu.
+          aku bisa jadi pacar kamu, temen cerita kamu, kakak kamu.
+          jadi, kamu harus jadi diri kamu sendiri kalo lagi sama aku
+          karna itu salah satu hal yang harus aku dapetin sebagai
+          pasangan kamu.
+        </p>
+
+        <p class="closing">
+          jangan cape sama aku ya, be karna sebenernya aku cuma bocah
+          ingusan manja yang banyak maunya, tapi kalo kamu ga nyaman
+          aku bisa ubah diri aku sampe bikin kamu ngerasa selalu aman,
+          nyaman deket aku, bukannya ngerasa risih.
+        </p>
+
+        <p class="closing">
+          jadi, kita tetep gini, ya? aku gamau ada hal apapun itu yang
+          bisa ngadu domba aku sama kamu, kalo ortu kamu ga setuju ya
+          kita #kaburajadulu atau kalo ortu kamu bener' pengen banget
+          tau aku, ketemu aku bilang suruh ke psikolog dulu, aku males
+          ngadepin orang temperament, sehat' deh om tante banyakin sabar,
+          takut darah tinggi.
+        </p>
+
+        <p class="closing">
+          yaudah be, cape ngetik, intinya happy birthday bebee, i'll always
+          love u, and aku harap kamu juga gitu. makasih udah baca
+          yappingan aku ampe sini, aduh jujur cape, ngetiknya, mana kaya
+          bocah alay baru kenal cinta lagi, ah elah. anw jangan lupa siapin
+          mental dan hati kamu be, karna aku bakal terus lanjut ngebuli n jailin
+          kamu, semangat merecehkan hubungan kita, dan kita cepet realisasikan
+          buat ngelesbiin indonesia. yaudahlah, lanjut rc aja ya, mpruy.
+        </p>
+
+        <div class="signature">
+          — from your favorite person (hopefully)
+        </div>
+      </div>
+
+      <div class="extra" id="extra">
+        <p>
+          nah, info penting yeuh:
+          kamu bisa ss isi web alay ini sebagai
+          bukti bahwa aku pernah serius selama
+          lebih dari lima menit. (kalimat rekomendasi
+          AI)
+        </p>
+
+        <p>
+          <strong>
+            udah ah keluar sana, balik rc.
+          </strong>
+        </p>
+
+        <button id="heartBtn">
+          OKAY, NOTED.
+        </button>
+      </div>
+
+      <div class="footer">
+        MADE FOR YOU. NO REFUNDS.
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    const openBtn = document.getElementById("openBtn");
+    const letter = document.getElementById("letter");
+    const extra = document.getElementById("extra");
+    const heartBtn = document.getElementById("heartBtn");
+
+    openBtn.addEventListener("click", function () {
+      letter.style.display = "block";
+      extra.style.display = "block";
+      openBtn.textContent = "ASSALAMUALAIKUM (mendadak islam)";
+      openBtn.disabled = true;
+
+      letter.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+
+    heartBtn.addEventListener("click", function () {
+      const symbols = ["♥", "✳", "♡"];
+
+      for (let i = 0; i < 24; i++) {
+        const item = document.createElement("span");
+
+        item.className = "pop";
+        item.textContent =
+          symbols[Math.floor(Math.random() * symbols.length)];
+
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.animationDelay = Math.random() * 1.2 + "s";
+        item.style.color =
+          Math.random() > 0.5 ? "#b64c43" : "#d6a5a0";
+
+        document.body.appendChild(item);
+
+        setTimeout(function () {
+          item.remove();
+        }, 4500);
+      }
+
+      heartBtn.textContent = "GOOD. THAT'S MY GIRL.";
+      heartBtn.disabled = true;
+    });
+  </script>
+</body>
+  </html>
+  
